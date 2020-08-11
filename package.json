@@ -24,6 +24,7 @@
     "@shared": "dist/shared"
   },
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "@types/mongoose": "^5.7.23",
     "command-line-args": "^5.1.1",
     "cookie-parser": "^1.4.5",
