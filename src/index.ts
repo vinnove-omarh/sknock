@@ -9,7 +9,8 @@ import mongoose from 'mongoose';
 
 import BaseRouter from './routes';
 import logger from '@shared/Logger';
-import { handleError, ErrorHandler } from '@helpers/ErrorHandler'
+import { handleError } from '@helpers/ErrorHandler'
+import ErrorHandler from '@helpers/ErrorHandler/index';
 
 // Init express
 const app = express();
@@ -33,11 +34,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Add APIs
-app.use('/api', BaseRouter);
-
-app.use('/' , (req,res)=>{
-    res.json('hello world')
-});
+app.use('/api/v1', BaseRouter);
 
 // Print API errors
 app.use((err: ErrorHandler, req: Request, res: Response, next: NextFunction) => {

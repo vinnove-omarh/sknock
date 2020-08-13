@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { ValidationErrorItem, ObjectSchema } from '@hapi/joi';
 
-import { ErrorHandler } from '@helpers/ErrorHandler'
+import ErrorHandler from '@helpers/ErrorHandler'
 
 interface IRequest extends Request {
   [key: string]: any;
